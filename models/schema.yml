@@ -1,5 +1,10 @@
 version: 2
 
 models:
-    -name: dbt_demo
-    description: "My firt dbt project"
+  - name: patient_claim_summary
+    description: model with one record per claim for claims billed at least once
+    columns:
+      - name: claim_id
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,43 @@
+version: 2
+
+sources:
+  - name: dbt_demo
+    database: raw
+    schema: billing_raw
+    tables:
+      - name: claims
+        columns:
+          - name: id
+            tests:
+              - unique
+            
+      - name: claim_diagnosis
+        columns:
+          - name: id
+            tests:
+              - unique
+
+      - name: claim_line
+        columns:
+          - name: id
+            tests:
+              - unique
+            
+      - name: doctors
+        columns:
+          - name: id
+            tests:
+              - unique
+            
+      - name: doc_specialties
+        columns:
+          - name: id
+            tests:
+              - unique
+
+      - name: patients
+        columns:
+          - name: id
+            tests:
+              - unique
+      
